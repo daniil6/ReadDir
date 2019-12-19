@@ -5,22 +5,20 @@
   <VirtualDirectory Name="src">
     <File Name="main.cpp"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
-        <IncludePath Value="$(RBKLib)\include"/>
+        <IncludePath Value="$(RBKLib)/include"/>
       </Compiler>
-      <Linker Options="">
-        <LibraryPath Value="$(RBKLib)\Debug"/>
-      </Linker>
+      <Linker Options=""/>
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="MinGW-W64 7.3.0" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
-        <IncludePath Value="."/>
-      </Compiler>
+      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
       <Linker Options="" Required="yes">
-        <LibraryPath Value="$(RBKLib)\Debug"/>
+        <LibraryPath Value="$(RBKLib)/Debug"/>
         <Library Value="RBKLibd"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
@@ -63,7 +61,7 @@
         <Preprocessor Value="NDEBUG"/>
       </Compiler>
       <Linker Options="" Required="yes">
-        <LibraryPath Value="$(RBKLib)\Release"/>
+        <LibraryPath Value="$(RBKLib)/Release"/>
         <Library Value="RBKLib"/>
       </Linker>
       <ResourceCompiler Options="" Required="no"/>
